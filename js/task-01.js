@@ -14,10 +14,7 @@ for (let i = 0; i < listOfCategories.length; i++) {
 
 //Variant 2
 
-// const listOfCategories = document.querySelector("#categories").children;
-// console.log(`В списке ${listOfCategories.length} категории.`);
-
-// [...listOfCategories].forEach((elem) => {
+// [...listOfCategories].forEach(elem => {
 //     console.log(`Категория: ${elem.querySelector("h2").textContent}`);
 //     console.log(`Количество элементов: ${elem.querySelector("ul").children.length}`);
 // });
