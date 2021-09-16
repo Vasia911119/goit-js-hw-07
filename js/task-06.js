@@ -1,16 +1,16 @@
-//Знайти поле вводу тексту та кількість символів по умові
+//Find the text input field and the number of characters by condition
 
 const inputText = document.querySelector("#validation-input");
 const textDataLength = inputText.getAttribute("data-length");
 
 
-//Функція для перевірки на правильну кількість символів та індикації на сторінці
+//Function to check for the correct number of characters and display on the page
 
 const validationInput = () => 
     inputText.value.length == textDataLength
         ? inputText.classList.add("valid") || inputText.classList.remove("invalid")
         : inputText.classList.add("invalid") || inputText.classList.remove("valid");
 
-//Перевіряємо на втрату фокусу
+//Check for loss of focus
 
 inputText.addEventListener("blur", validationInput);
