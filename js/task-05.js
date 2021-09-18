@@ -6,7 +6,9 @@ const defaultText = outputTextField.textContent;
 
 //Change the text when type in input
 
-const changeText = event => outputTextField.textContent = event.currentTarget.value;
+const changeText = event => event.currentTarget.value === ""
+    ? outputTextField.textContent = defaultText
+    : outputTextField.textContent = event.currentTarget.value;
 
 //Get values ​​from the text input field
 
