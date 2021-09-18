@@ -12,7 +12,9 @@ const boxesContainer = document.getElementById("boxes");
 
 //Functions for creating and deleting boxes
 
-let defaultSize = 30;
+let defaultWidth = 30;
+let defaultHeight = 30;
+
 const randomRgb = () => Math.round(255 * Math.random());
 
 const addBox = () => {
@@ -24,7 +26,8 @@ const addBox = () => {
 const delBox = () => {
     boxesContainer.innerHTML = "";
     inputField.value = "";
-    defaultSize = 30;
+    defaultWidth = 30;
+    defaultHeight = 30;
 };
 
 const createBoxes = amount => {
@@ -32,8 +35,8 @@ const createBoxes = amount => {
     for (let i = 0; i < amount; i += 1) {
         const box = document.createElement("div");
         box.style.cssText =
-            `width: ${defaultSize += 10 * i}px; 
-            height: ${defaultSize += 10 * i}px; 
+            `width: ${defaultWidth += 10}px; 
+            height: ${defaultHeight += 10}px; 
             background-color: rgba( ${randomRgb()} , ${randomRgb()} , ${randomRgb()} )`;
         boxes.push(box);
     };
