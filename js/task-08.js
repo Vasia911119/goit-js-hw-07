@@ -18,6 +18,7 @@ const randomRgb = () => Math.round(255 * Math.random());
 const addBox = () => {
     const amount = inputField.value;
     createBoxes(amount);
+    inputField.value = "";
 };
 
 const delBox = () => {
